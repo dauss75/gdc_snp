@@ -10,7 +10,7 @@
 
 - Dataset: 33 cancer types processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MK)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
 
-| Label | Cancer Type  | # of features (MT) | # of Samples (MT)|# of features (MS) | # of Samples (MS)|# of features (MK) | # of Samples (MK)# of features (VS) | # of Samples (VS)|
+| Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
 | ------|------------- | -------------------|------------------|
 |   1 	|    ACC 	     |          4752	    |        92        |
 |   2	  |    BLCA 	   |          16551	    |       412        |
