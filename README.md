@@ -4,26 +4,12 @@
 
 - [Data Preparation](#data-preparation)
 - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
-- [Test MINID](#test-MINID)
-- [Process steps](#process-steps)
-    - [Log on to BDDS Globus Genomics](#log-on-to-bdds-globus-genomics)
-    - [Generate API Key](#generate-api-key)
-    - [Import published workflows](#import-published-workflows)
-    - [Execute analysis](#execute-analysis)
-    - [Results](#results)
-   - Step1: data preparation
-     - maftools
-     - tumor vs normal (metadata)
-     -
 
-     - Data summary
+## Data Preparation
 
-### Data Preparation
+- Dataset: 33 cancer types processed by 4 somatic calling tools: [MuSE](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2](https://www.nature.com/articles/nbt.2514), [VarScan2](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
 
-- Dataset
-  - 33 cancer types processed by 4 somatic calling tools:  [MuSE](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract),[MuTect2](https://www.nature.com/articles/nbt.2514),[VarScan2](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
-
-  - trial 1 with the data from MuTeck2 only
+- Trial 1 is with the data from MuTeck2 (MT) only and below is the summary
 
 | Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
 | ------|------------- | -------------------|------------------|
@@ -63,4 +49,4 @@
 
 ### Somatic Variant Calling Workflow
 
-- 
+- Aligned tumor-normal BAM pairs are processed through the Somatic Mutation Calling Workflow
