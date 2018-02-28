@@ -4,12 +4,11 @@
 
 - [Data Preparation](#data-preparation)
 - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
+- [Simulation](#simulation)
 
 ## Data Preparation
 
-- Dataset: 33 cancer types processed by 4 somatic calling tools: [MuSE](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2](https://www.nature.com/articles/nbt.2514), [VarScan2](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
-
-- Trial 1 is with the data from MuTeck2 (MT) only and below is the summary
+- Dataset: 33 cancer types processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MK)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
 
 | Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
 | ------|------------- | -------------------|------------------|
@@ -47,6 +46,10 @@
 |  32		|    UCS 	     |          5110  	  |        57        |
 |  33		|    UVM   	   |          1082  	  |        80        |
 
-### Somatic Variant Calling Workflow
+## Somatic Variant Calling Workflow
 
 - Aligned tumor-normal BAM pairs are processed through the Somatic Mutation Calling Workflow
+
+## Simulation
+
+- Trial 1 is with the data from MuTeck2 (MT)
