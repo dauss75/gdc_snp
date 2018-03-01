@@ -56,6 +56,7 @@
   - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
   - # of class: 33
 
+
 ![Screenshot](figs/trial1.png)  
 *Figure 1. accuracy (A) and loss (B) scores are shown over epochs. The training accuracy continues to improve whereas the test accuracy
 stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs*
