@@ -8,7 +8,7 @@
       - [PCA and Covariates](#pca-and-covariates)
 - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 - [Simulation](#simulation)
-   - [Trial 1: Mutect Data](#trial-1:-mutect-data)
+     - [Trial 1: Mutect Data](#trial-1:-mutect-data)
 
 ## Data Preparation
 
