@@ -8,7 +8,7 @@
       - [PCA and Covariates](#pca-and-covariates)
 - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 - [Simulation](#simulation)
-     - [Trial 1: Mutect Data](#trial-1:-mutect-data)
+     - [Trial 1 with Mutect Data](#trial-1-with-mutect-data)
 
 ## Data Preparation
 
@@ -32,14 +32,16 @@ TBD
 Aligned tumor-normal BAM pairs are processed through the Somatic Mutation Calling Workflow.
 
 ![Screenshot](figs/gdc-alignment.png)
+
 *DNA-seq alignment pipeline-Courtesy of GDC*
 
 ![Screenshot](figs/gdc-Broad_MuTect.png)
+
 *Mutect somatic variant calling pipeline-Courtesy of GDC*
 
 ## Simulation
 
-### Trial 1: Mutect Data
+### Trial 1 with Mutect Data
 
 Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 
