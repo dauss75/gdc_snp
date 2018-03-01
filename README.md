@@ -80,6 +80,8 @@ Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 *Figure 1. accuracy (A) and loss (B) scores are shown over epochs. The training accuracy continues to improve whereas the test accuracy
 stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs.*
 
+----------
+
 ## Supplementary Information
 
 ### Somatic Variant Calling Workflow
