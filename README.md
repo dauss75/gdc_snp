@@ -59,6 +59,8 @@ Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 |  32		|    UCS 	     |          5110  	  |        57        |
 |  33		|    UVM   	   |          1082  	  |        80        |
 
+Summary of DNN
+
 - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
 - class labels: 33
 - primarily results
