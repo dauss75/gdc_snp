@@ -53,3 +53,7 @@
 ## Simulation
 
 - Trial 1 is with the data from MuTeck2 (MT)
+  - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
+  - # of class: 33
+
+![Screenshot](figs/trial1.pdf)  
