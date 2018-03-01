@@ -5,7 +5,7 @@
 - [Data Preparation](#data-preparation)
    - [Feature generation](#feature-generation)
    - [Feature evaluation](#feature-evaluation)
-   - [PCA and Covariates](#pca-and-covariates)
+      - [PCA and Covariates](#pca-and-covariates)
 - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 - [Simulation](#simulation)
    - [Trial 1: Mutect Data](#trial-1:-mutect-data)
@@ -22,7 +22,7 @@ TBD
 
 TBD
 
-### PCA and Covariates
+#### PCA and Covariates
 
 TBD
 
