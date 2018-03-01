@@ -6,13 +6,14 @@
    - [Feature generation](#feature-generation)
    - [Feature evaluation](#feature-evaluation)
       - [PCA and Covariates](#pca-and-covariates)
-- [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 - [Simulation](#simulation)
      - [Trial 1 with Mutect Data](#trial-1-with-mutect-data)
+- [Supplementary Information](#supplementary-information)
+     - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 
 ## Data Preparation
 
-33 cancer types processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MK)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
+Masked somatic mutation data for 33 cancer types are available which are processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MK)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short)
 
 ### Feature generation
 
@@ -26,18 +27,6 @@ TBD
 
 TBD
 
-
-## Somatic Variant Calling Workflow
-
-Aligned tumor-normal BAM pairs are processed through the Somatic Mutation Calling Workflow.
-
-![Screenshot](figs/gdc-alignment.png)
-
-*DNA-seq alignment pipeline-Courtesy of GDC*
-
-![Screenshot](figs/gdc-Broad_MuTect.png)
-
-*Mutect somatic variant calling pipeline-Courtesy of GDC*
 
 ## Simulation
 
@@ -90,3 +79,17 @@ Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 ![Screenshot](figs/trial1.png)  
 *Figure 1. accuracy (A) and loss (B) scores are shown over epochs. The training accuracy continues to improve whereas the test accuracy
 stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs.*
+
+## Supplementary Information
+
+### Somatic Variant Calling Workflow
+
+Aligned tumor-normal BAM pairs are processed through the Somatic Mutation Calling Workflow.
+
+![Screenshot](figs/gdc-alignment.png)
+
+*DNA-seq alignment pipeline-Courtesy of GDC*
+
+![Screenshot](figs/gdc-Broad_MuTect.png)
+
+*Mutect somatic variant calling pipeline-Courtesy of GDC*
