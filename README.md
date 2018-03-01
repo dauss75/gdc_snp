@@ -56,4 +56,6 @@
   - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
   - # of class: 33
 
+- As shown in the loss shows,
 ![Screenshot](figs/trial1.png)  
+*Figure 1. accuracy and loss*
