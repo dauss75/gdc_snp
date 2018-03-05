@@ -81,7 +81,7 @@ Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs.*
 
 ![Screenshot](figs/trial1_dropout_0.2.png)  
-*Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but the overfitting problem is not resolved.*
+*Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
 
 ----------
 
