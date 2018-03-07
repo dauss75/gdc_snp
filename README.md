@@ -18,10 +18,10 @@ Masked somatic mutation data for 33 cancer types (WGS) are available which are p
 
 ### Feature generation
 
-- This is by generating a count matrix of mutation that is based on the number of mutation per gene per sample.
+Generate a count matrix of mutation that is based on the number of mutation per gene per sample.
+
 - First, we include all mutations - [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution). Note that sysnonymous mutation does not change encoded amino acid where as non-sysnonymous mutation does.
 - Second, we include only non-sysnonymous mutation.
-
 
 
 TBD
