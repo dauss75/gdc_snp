@@ -23,8 +23,8 @@ Generate a count matrix of mutation that is based on the number of mutation per 
 - First, we include all mutations - [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution). Note that sysnonymous mutation does not change encoded amino acid where as non-sysnonymous mutation does.
 - Second, we include only non-sysnonymous mutation.
 
+For more details about mutations, please see [List of mutations](#list-of-mutations).
 
-TBD
 
 ### Feature evaluation
 
