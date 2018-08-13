@@ -6,42 +6,21 @@
    - [Feature generation](#feature-generation)
    - [Feature evaluation](#feature-evaluation)
       - [PCA and Covariates](#pca-and-covariates)
-- [Simulation](#simulation)
-     - [Trial 1 with Mutect Data](#trial-1-with-mutect-data)
+- [Simulation 1: test 1 with all mutation](#simulation-1:-test-1-with-all-mutation)
+- [Simulation 1: test 2 with Nonsynonymous mutation only](#simulation-1:-test-2-with-nonsynonymous-mutation-only)
+- [Simulation 2: test 1 with all mutation](#simulation-2:-test-1-with-all-mutation)
+- [Simulation 2: test 2 with Nonsynonymous mutation only](#simulation-2:-test-2-with-nonsynonymous-mutation-only)
 - [Supplementary Information](#supplementary-information)
      - [List of mutations](#list-of-mutations)
      - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 
 ## Data Preparation
 
-Masked somatic mutation data for 33 cancer types (WGS) are available which are processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MK)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short). The data is from whole genome sequencing.
+Masked somatic mutation data for 33 cancer types are available which are processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MT)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short). The data is from whole genome sequencing (WGS).  
 
-### Feature generation
+Below is the summary of sumatic mutation data from MT, in total of 8132 samples.
 
-Generate a count matrix of mutation that is based on the number of mutation per gene per sample.
-
-- First, we include all mutations - [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution). Note that sysnonymous mutation does not change encoded amino acid where as non-sysnonymous mutation does.
-- Second, we include only non-sysnonymous mutation.
-
-For more details about mutations, please see [List of mutations](#list-of-mutations).
-
-
-### Feature evaluation
-
-TBD
-
-#### PCA and Covariates
-
-TBD
-
-
-## Simulation
-
-### Test 1 with Muteck Data
-
-Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
-
-| Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
+| Label | Cancer Type  | # of features      | # of Samples     |
 | ------|------------- | -------------------|------------------|
 |   1 	|    ACC 	     |          4752	    |        92        |
 |   2	  |    BLCA 	   |          16551	    |       412        |
@@ -77,6 +56,45 @@ Dataset: Somatic mutation data from MuTeck2 (MT) in total of 8132 samples
 |  32		|    UCS 	     |          5110  	  |        57        |
 |  33		|    UVM   	   |          1082  	  |        80        |
 
+For the performance evaluation, we select 21 cancer types that include both reasonable number of features
+samples.
+
+### Feature generation
+
+Generate a count matrix of mutation that is based on the number of mutation per gene per sample.
+
+- First, we include all mutations (i.e.,  [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution)) except the variants in noncoding regions.
+
+Note that sysnonymous mutation does not change encoded amino acid whereas non-sysnonymous mutation does.
+
+- Second, we include only non-sysnonymous ( or missense) mutation.
+
+For more details about mutations, please see [List of mutations](#list-of-mutations).
+
+- Third, we include pathway features utilizing the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp).
+
+
+### Feature evaluation
+
+TBD
+
+#### PCA and Covariates
+
+TBD
+
+## Simulation 1
+
+### Test 1 with all mutation
+
+
+### Test 2 with missense mutation only
+
+## Simulation 2
+
+### Test 1 with all mutation
+
+### Test 2 with Nonsynonymous mutation only
+
 **Summary of DNN**
 
 - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
@@ -90,36 +108,31 @@ stabilizes around 20 epochs that is explanined by the loss score where the valid
 ![Screenshot](figs/trial1_dropout_0.2.png)  
 *Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
 
-**Evaluation with cancer data with >100 samples**
+**Evaluation with cancer data with samples >100 and the median number of variants > 15**
 
 | Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
 | ------|------------- | -------------------|------------------|
-|   2	  |    BLCA 	   |          16551	    |       412        |
-|   3		|    BRCA      |          16131	    |       985        |
-|   4		|    CESC 	   |          15342	    |       289        |
-|   6		|    COAD 	   |          18037	    |       399        |
-|   8		|    ESCA 	   |          10719	    |       184        |
-|   9		|    GBM 	     |          14778	    |       392        |
-|  10		|    HNSC 	   |          15436	    |       508        |
-|  12		|    KIRC 	   |          9444 	    |       336        |
-|  13		|    KIRP 	   |          8689 	    |       281        |
-|  14		|    LAML 	   |          4810 	    |       140        |
-|  15		|    LGG 	     |          10728 	  |       507        |
-|  16		|    LIHC 	   |          12704 	  |       363        |
-|  17		|    LUAD 	   |          16980 	  |       565        |
-|  18		|    LUSC 	   |          16784 	  |       491        |
-|  20		|    OV 	     |          14226 	  |       436        |
-|  21		|    PAAD 	   |          9967  	  |       175        |
-|  22		|    PCPG 	   |          1416  	  |       178        |
-|  23		|    PRAD 	   |          9829  	  |       494        |
-|  24		|    READ 	   |          13333 	  |       137        |
-|  25		|    SARC 	   |          8119  	  |       237        |
-|  26		|    SKCM 	   |          17509 	  |       467        |
-|  27		|    STAD 	   |          17431	    |       437        |
-|  28		|    TGCT 	   |          1749 	    |       144        |
-|  29		|    THCA 	   |          4643 	    |       490        |
-|  30		|    THYM 	   |          2084 	    |       123        |
-|  31		|    UCEC 	   |          18998	    |       530        |
+|   1	  |    BLCA 	   |          16551	    |       412        |
+|   2		|    BRCA      |          16131	    |       985        |
+|   3		|    CESC 	   |          15342	    |       289        |
+|   4		|    COAD 	   |          18037	    |       399        |
+|   5		|    ESCA 	   |          10719	    |       184        |
+|   6		|    GBM 	     |          14778	    |       392        |
+|   7		|    HNSC 	   |          15436	    |       508        |
+|   8		|    KIRC 	   |          9444 	    |       336        |
+|   9		|    KIRP 	   |          8689 	    |       281        |
+|  10		|    LGG 	     |          10728 	  |       507        |
+|  11		|    LIHC 	   |          12704 	  |       363        |
+|  12		|    LUAD 	   |          16980 	  |       565        |
+|  13		|    LUSC 	   |          16784 	  |       491        |
+|  14		|    OV 	     |          14226 	  |       436        |
+|  15		|    PAAD 	   |          9967  	  |       175        |
+|  16		|    PRAD 	   |          9829  	  |       494        |
+|  17		|    READ 	   |          13333 	  |       137        |
+|  18		|    SARC 	   |          8119  	  |       237        |
+|  19		|    SKCM 	   |          17509 	  |       467        |
+|  20		|    STAD 	   |          17431	    |       437        |
+|  21		|    UCEC 	   |          18998	    |       530        |
 
 
 ----------
