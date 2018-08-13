@@ -18,7 +18,7 @@
 
 Masked somatic mutation data for 33 cancer types are available which are processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MT)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short). The data is from whole genome sequencing (WGS).  
 
-Below is the summary of sumatic mutation data from MT, in total of 8132 samples.
+Below is the summary of GDC somatic varinants data processed by MuTect2, in total of 8132 samples.
 
 | Label | Cancer Type  | # of features      | # of Samples     |
 | ------|------------- | -------------------|------------------|
@@ -74,28 +74,13 @@ For more details about mutations, please see [List of mutations](#list-of-mutati
 - Third, we include pathway features utilizing the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp).
 
 
-### Feature evaluation
-
-TBD
-
-#### PCA and Covariates
-
-TBD
-
 ## Simulation 1
 
 ### Test 1 with all mutation
 
 
-### Test 2 with missense mutation only
-
-## Simulation 2
-
-### Test 1 with all mutation
 
 ### Test 2 with Nonsynonymous mutation only
-
-**Summary of DNN**
 
 - Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
 - class labels: 33
