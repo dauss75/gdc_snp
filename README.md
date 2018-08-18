@@ -105,13 +105,13 @@ For more details about mutations, please see [List of mutations](#list-of-mutati
 * Input data: training ( 6470 samples x 19372 features) and test ( 2155 samples x 19372 features)
 * class labels: 21
 
-### All-mutation data
+  * All-mutation data
 
 ![Screenshot](figs/all-mut-dropout-0.1.png)
 
 ![Screenshot](figs/all-mut-dropout-0.4.png)  
 
-### All mutation data normalized by gene length
+  * All mutation data normalized by gene length
 
 ![Screenshot](figs/all-mut-norm-by-gene-dropout-0.1.png)
 
