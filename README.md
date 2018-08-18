@@ -4,12 +4,12 @@
 
 - [Data Preparation](#data-preparation)
    - [Feature generation](#feature-generation)
-   - [Feature evaluation](#feature-evaluation)
-      - [PCA and Covariates](#pca-and-covariates)
-- [Simulation 1: test 1 with all mutation](#simulation-1:-test-1-with-all-mutation)
-- [Simulation 1: test 2 with Nonsynonymous mutation only](#simulation-1:-test-2-with-nonsynonymous-mutation-only)
-- [Simulation 2: test 1 with all mutation](#simulation-2:-test-1-with-all-mutation)
-- [Simulation 2: test 2 with Nonsynonymous mutation only](#simulation-2:-test-2-with-nonsynonymous-mutation-only)
+- [Simulation A](#simulation-a)
+  - [All mutation data](#all-mutation-data)
+  - [All mutation data normalized by gene length](#all-mutation-data-normalized-by-gene-length)
+- [Simulation B](#simulation-b)
+  - [Nonsynonymous mutation data](#nonsynonymous-mutation-data)
+
 - [Supplementary Information](#supplementary-information)
      - [List of mutations](#list-of-mutations)
      - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
@@ -59,40 +59,6 @@ Below is the summary of GDC somatic varinants data processed by MuTect2, in tota
 For the performance evaluation, we select 21 cancer types that include both reasonable number of features
 samples.
 
-### Feature generation
-
-Generate a count matrix of mutation that is based on the number of mutation per gene per sample.
-
-- First, we include all mutations (i.e.,  [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution)) except the variants in noncoding regions.
-
-Note that sysnonymous mutation does not change encoded amino acid whereas non-sysnonymous mutation does.
-
-- Second, we include only non-sysnonymous ( or missense) mutation.
-
-For more details about mutations, please see [List of mutations](#list-of-mutations).
-
-- Third, we include pathway features utilizing the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp).
-
-
-## Simulation 1
-
-### Test 1 with all mutation
-
-
-
-### Test 2 with Nonsynonymous mutation only
-
-- Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
-- class labels: 33
-- primarily results
-
-![Screenshot](figs/trial1_dropout_0.1.png)  
-*Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1. The training accuracy continues to improve whereas the test accuracy
-stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs.*
-
-![Screenshot](figs/trial1_dropout_0.2.png)  
-*Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
-
 **Evaluation with cancer data with samples >100 and the median number of variants > 15**
 
 | Label | Cancer Type  | # of features (MT) | # of Samples (MT)|
@@ -118,6 +84,73 @@ stabilizes around 20 epochs that is explanined by the loss score where the valid
 |  19		|    SKCM 	   |          17509 	  |       467        |
 |  20		|    STAD 	   |          17431	    |       437        |
 |  21		|    UCEC 	   |          18998	    |       530        |
+
+### Feature generation
+
+Generate a count matrix of mutation that is based on the number of mutation per gene per sample.
+
+- First, we include all mutations (i.e.,  [sysnonymous](https://en.wikipedia.org/wiki/Synonymous_substitution) and [non-sysnonymous](https://en.wikipedia.org/wiki/Nonsynonymous_substitution)) except the variants in noncoding regions.
+
+Note that sysnonymous mutation does not change encoded amino acid whereas non-sysnonymous mutation does.
+
+- Second, we include only non-sysnonymous ( or missense) mutation.
+
+For more details about mutations, please see [List of mutations](#list-of-mutations).
+
+- Third, we include pathway features utilizing the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp).
+
+
+## Simulation A
+
+* Input data: training ( 6470 samples x 19372 features) and test ( 2155 samples x 19372 features)
+* class labels: 21
+
+### All-mutation data
+
+![Screenshot](figs/all-mut-dropout-0.1.png)
+
+![Screenshot](figs/all-mut-dropout-0.4.png)  
+
+### All mutation data normalized by gene length
+
+![Screenshot](figs/all-mut-norm-by-gene-dropout-0.1.png)
+
+![Screenshot](figs/all-mut-norm-by-gene-dropout-0.4.png)  
+
+## Simulation B
+
+### Nonsynonymous mutation data
+
+* Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
+* class labels: 21
+
+![Screenshot](figs/trial1_dropout_0.1.png)  
+* Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1. The training accuracy continues to improve whereas the test accuracy
+stabilizes around 20 epochs that is explanined by the loss score where the validation loss does not decrease at around 20 epochs.*
+
+![Screenshot](figs/trial1_dropout_0.2.png)  
+* Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
+
+
+- Input data
+  - snp count (8625 x 19371)
+  - <del>c1 (positional gene sets) pathway (8623 x 326)</del>
+  - c2 (Curated gene sets) pathway (8623 x 4762)
+  - <del>c3 (noncoding) pathway (8616 x 836)</del>
+  - c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
+  - c5 (GO gene sets) pathway (8622 x 5917)
+  - c6 (oncogenic signatures) pathway (8613 x 189)
+  - c7 (immunologic signatures) pathway (8623 x 4872)
+  - <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+
+
+
+
+
+
+
+
+
 
 
 ----------
