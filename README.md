@@ -85,13 +85,13 @@ batch_size=32
 classes=21
 ```
 
-![Screenshot](figs/c21.all.snp_cnt.drop_0.1.png)
+![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
 * Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
 
-![Screenshot](figs/c21.all.snp_cnt.drop_0.3.png)
+![Screenshot](figs/c21.all.snp_cnt.drop_03.png)
 * Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
 
-![Screenshot](figs/c21.all.snp_cnt.drop_0.5.png)  
+![Screenshot](c21.all.snp_cnt.drop_05.png)  
 * Figure 3. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
