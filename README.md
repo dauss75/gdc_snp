@@ -21,7 +21,7 @@ Masked somatic mutation data for 33 cancer types are available which are process
 
 
 For the performance evaluation, we select 21 cancer types that include both reasonable number of features
-samples. For the full list of cancer, please click [here](#gdc-cancer). 
+samples. For the full list of cancer, please click [here](#gdc-cancer).
 
 **Evaluation with cancer data with samples >100 and the median number of variants > 15**
 
@@ -85,13 +85,13 @@ batch_size=32
 classes=21
 ```
 
-![Screenshot](figs/c21.all.snp_cnt.drop0.1.png)
+![Screenshot](figs/c21.all.snp_cnt.drop_0.1.png)
 * Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
 
-![Screenshot](figs/c21.all.snp_cnt.drop0.3.png)
+![Screenshot](figs/c21.all.snp_cnt.drop_0.3.png)
 * Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
 
-![Screenshot](figs/c21.all.snp_cnt.drop0.5.png)  
+![Screenshot](figs/c21.all.snp_cnt.drop_0.5.png)  
 * Figure 3. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
