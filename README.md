@@ -69,8 +69,6 @@ For more details about mutations, please see [List of mutations](#list-of-mutati
 * Input data: training ( 6470 samples x 19372 features) and test ( 2155 samples x 19372 features)
 * class labels: 21
 
-### 1. All-mutation data
-
 * Common hyperparameters
 ```
 conv=[128, 20, 1, 128, 10, 1]
@@ -85,6 +83,8 @@ batch_size=32
 classes=21
 ```
 
+### 1. All-mutation data
+
 ![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
 * Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
 
@@ -95,14 +95,26 @@ classes=21
 * Figure 3. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
-* Figure 4. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and no max pooling. The best test accuracy is 44.9%.
+* Figure 4. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
 
 
 ### 2. All mutation data normalized by gene length
 
-![Screenshot](figs/all-mut-norm-by-gene-dropout-0.1.png)
+![Screenshot](figs/c21.all.snp_cnt_norm.drop_01.png)
+* Figure 6. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
 
-![Screenshot](figs/all-mut-norm-by-gene-dropout-0.4.png)  
+![Screenshot](figs/c21.all.snp_cnt_norm.drop_03.png)
+* Figure 7. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
+
+![Screenshot](figs/c21.all.snp_cnt_norm.drop_05.png)
+* Figure 8. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
+
+![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_01.png)
+* Figure 9. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 45.5%.
+
+![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
+* Figure 10. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and *no* max pooling. The best test accuracy is 48.2%.
+
 
 ## Simulation B
 
