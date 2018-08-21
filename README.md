@@ -12,6 +12,8 @@
   - [Nonsynonymous mutation data normalized by gene length](#nonsynonymous-mutation-data-normalized-by-gene-length)
 - [Simulation C](#simulation-c)
   - [Pathway data](#pathway-data)
+- [Simulation D](#simulation-d)
+  - [All mutation data normalized by gene length + Pathway data](#all-mutation-data-normalized-by-gene-length+pathway-data)
 
 - [Supplementary Information](#supplementary-information)
      - [List of mutations](#list-of-mutations)
@@ -186,10 +188,17 @@ classes=21
   * [ ] c5 (GO gene sets) pathway (8622 x 5917)
   * [ ] c6 (oncogenic signatures) pathway (8613 x 189)
   * [ ] c7 (immunologic signatures) pathway (8623 x 4872)
+  * [ ] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
   * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
 
+## Simulation D
 
+### All mutation data normalized by gene length + Pathway data
 
+  * [ ] snp_cnt_norm + c2
+  * [ ] snp_cnt_norm + c5
+  * [ ] snp_cnt_norm + c7
+  * [ ] snp_cnt_norm + combo
 
 
 
