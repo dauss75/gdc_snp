@@ -16,11 +16,10 @@
      - [List of mutations](#list-of-mutations)
      - [Somatic Variant Calling Workflow](#somatic-variant-calling-workflow)
 
+
 ## Data Preparation
 
 Masked somatic mutation data for 33 cancer types are available which are processed by 4 somatic calling tools: [MuSE (MS)](http://www.biorxiv.org/content/early/2016/05/25/055467.abstract), [MuTect2 (MT)](https://www.nature.com/articles/nbt.2514), [VarScan2 (VS)](https://genome.cshlp.org/content/22/3/568.short), and [SomaticSniper (SS)](http://bioinformatics.oxfordjournals.org/content/28/3/311.short). The data is from whole genome sequencing (WGS).  
-
-
 
 For the performance evaluation, we select 21 cancer types that include both reasonable number of features
 samples. For the full list of cancer, please click [here](#gdc-cancer).
@@ -88,40 +87,40 @@ classes=21
 ### 1. All-mutation data
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
-* Figure 1. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
+- **Figure 1**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_03.png)
-* Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
+- **Figure 2**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
 
 ![Screenshot](c21.all.snp_cnt.drop_05.png)  
-* Figure 3. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
+- **Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
-* Figure 4. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
+- **Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
 
 
 ### 2. All mutation data normalized by gene length
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_01.png)
-* Figure 6. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
+- **Figure 6**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_03.png)
-* Figure 7. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
+- **Figure 7**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_05.png)
-* Figure 8. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
+- **Figure 8**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_01.png)
-* Figure 9. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 45.5%.
+- **Figure 9**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 45.5%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
-* Figure 10. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and *no* max pooling. The best test accuracy is 48.2%.
+- **Figure 10**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 48.2%.
 
-- A few notes by observing the performance:
+**A few notes by observing the performance:**
   - due to the overfitting problems shown in loss figures, dropout of 0.5 seems to be the right choice.
   - Due to the nature of sparsity in variant data, a downsampling strategy may not work well.  In fact, the best test accuracies were observed without max pooling.    
 
-## [ ] Simulation B
+## Simulation B
 
 * Input data: training ( 6470 samples x 19372 features) and test ( 2155 samples x 19372 features)
 * class labels: 21
