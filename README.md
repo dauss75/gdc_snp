@@ -123,6 +123,9 @@ classes=21
 
 ## Simulation B
 
+As we observe from [Simulation A](#simulation-a) that without max pooling outperformed overall, following experiments consider
+no max pooling, but with three dropout values - 0.1, 0.3, and 0.5.    
+
 ### Nonsynonymous mutation data
 
 * Input data: training ( 6466 samples x 19168 features) and test ( 2154 samples x 19168 features)
