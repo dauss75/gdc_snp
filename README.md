@@ -9,6 +9,8 @@
   - [All mutation data normalized by gene length](#all-mutation-data-normalized-by-gene-length)
 - [Simulation B](#simulation-b)
   - [Nonsynonymous mutation data](#nonsynonymous-mutation-data)
+  - [Nonsynonymous mutation data normalized by gene length](#nonsynonymous-mutation-data-normalized-by-gene-length)
+
 
 - [Supplementary Information](#supplementary-information)
      - [List of mutations](#list-of-mutations)
@@ -115,10 +117,30 @@ classes=21
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
 * Figure 10. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and *no* max pooling. The best test accuracy is 48.2%.
 
+- A few notes by observing the performance:
+  - due to the overfitting problems shown in loss figures, dropout of 0.5 seems to be the right choice.
+  - Due to the nature of sparsity in variant data, a downsampling strategy may not work well.  In fact, the best test accuracies were observed without max pooling.    
 
-## Simulation B
+## [ ] Simulation B
 
-### Nonsynonymous mutation data
+* Input data: training ( 6470 samples x 19372 features) and test ( 2155 samples x 19372 features)
+* class labels: 21
+
+* Common hyperparameters
+```
+conv=[128, 20, 1, 128, 10, 1]
+dense=[256, 128]
+activation='relu'
+out_act='softmax'
+loss='categorical_crossentropy'
+optimizer='adam'
+metrics='accuracy'
+epochs=20
+batch_size=32
+classes=21
+```
+
+### 3. Nonsynonymous mutation data
 
 * Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
 * class labels: 21
@@ -130,6 +152,7 @@ stabilizes around 20 epochs that is explanined by the loss score where the valid
 ![Screenshot](figs/trial1_dropout_0.2.png)  
 * Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
 
+### 4. Nonsynonymous mutation data normalized by gene length
 
 - Input data
   - snp count (8625 x 19371)
