@@ -177,7 +177,7 @@ classes=21
 
 ### Pathway data
 
-* We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h as the gene sets appear to be less relevant to cancer classifications.  We first evaluate each pathway and then combine some of them to access the performance.
+* We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h gene sets as they appear to be less relevant to cancer classification.  We first evaluate each pathway and then combine some of them to assess the performance.  Note that we build the pathway matrix using [normalized all mutation count](#all-mutation-data-normalized-by-gene-length).
 
   * <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
   * [ ] c2 (Curated gene sets) pathway (8623 x 4762)
@@ -187,6 +187,7 @@ classes=21
   * [ ] c6 (oncogenic signatures) pathway (8613 x 189)
   * [ ] c7 (immunologic signatures) pathway (8623 x 4872)
   * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+
 
 
 
