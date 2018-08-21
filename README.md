@@ -97,7 +97,7 @@ classes=21
 **Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
-**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
+**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 44.9%.
 
 
 ### All mutation data normalized by gene length
@@ -166,20 +166,31 @@ classes=21
 ![Screenshot](figs/c21.missense.snp_cnt_norm.drop05.jpg)  
 **Figure 16**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 38.9%.
 
+**A few notes by observing the performance:**
+  - similar to [Simulation A](#simulation-a), dropout of 0.5 seems to work best.
+
+**Conclusion from [Simulation A](#simulation-a) and [Simulation B](#simulation-b)**
+  - all mutation count normalized by gene length yields the best test accuracy of 48.2% with dropout=0.5.
+  - considering nonsynonymous mutation (or missense) data, the best performance was 10% lower than utilizing all mutation data.  
+
 ## Simulation C
 
-- Input data
-  - snp count (8625 x 19371)
-  - <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
-  - c2 (Curated gene sets) pathway (8623 x 4762)
-  - <del>c3 (noncoding) pathway (8616 x 836)</del>
-  - c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
-  - c5 (GO gene sets) pathway (8622 x 5917)
-  - c6 (oncogenic signatures) pathway (8613 x 189)
-  - c7 (immunologic signatures) pathway (8623 x 4872)
-  - <del>h (hallmark gene sets) pathway (8576 x 50)</del>
-
 ### Pathway data
+
+* We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h as the gene sets appear to be less relevant to cancer classifications.  We first evaluate each pathway and then combine some of them to access the performance.
+
+  * <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
+  * [ ] c2 (Curated gene sets) pathway (8623 x 4762)
+  * <del>c3 (noncoding) pathway (8616 x 836)</del>
+  * [ ] c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
+  * [ ] c5 (GO gene sets) pathway (8622 x 5917)
+  * [ ] c6 (oncogenic signatures) pathway (8613 x 189)
+  * [ ] c7 (immunologic signatures) pathway (8623 x 4872)
+  * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+
+
+
+
 
 
 
