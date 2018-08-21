@@ -10,7 +10,8 @@
 - [Simulation B](#simulation-b)
   - [Nonsynonymous mutation data](#nonsynonymous-mutation-data)
   - [Nonsynonymous mutation data normalized by gene length](#nonsynonymous-mutation-data-normalized-by-gene-length)
-
+- [Simulation C](#simulation-c)
+  - [Pathway data](#pathway-data)
 
 - [Supplementary Information](#supplementary-information)
      - [List of mutations](#list-of-mutations)
@@ -84,37 +85,37 @@ batch_size=32
 classes=21
 ```
 
-### 1. All-mutation data
+### All-mutation data
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
-- **Figure 1**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
+**Figure 1**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_03.png)
-- **Figure 2**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
+**Figure 2**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
 
 ![Screenshot](c21.all.snp_cnt.drop_05.png)  
-- **Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
+**Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
-- **Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
+**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and *no* max pooling. The best test accuracy is 44.9%.
 
 
-### 2. All mutation data normalized by gene length
+### All mutation data normalized by gene length
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_01.png)
-- **Figure 6**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
+**Figure 6**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_03.png)
-- **Figure 7**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
+**Figure 7**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_05.png)
-- **Figure 8**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
+**Figure 8**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_01.png)
-- **Figure 9**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 45.5%.
+**Figure 9**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 45.5%.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
-- **Figure 10**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 48.2%.
+**Figure 10**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 48.2%.
 
 **A few notes by observing the performance:**
   - due to the overfitting problems shown in loss figures, dropout of 0.5 seems to be the right choice.
@@ -139,7 +140,7 @@ batch_size=32
 classes=21
 ```
 
-### 3. Nonsynonymous mutation data
+### Nonsynonymous mutation data
 
 * Input data: training (8132 samples x 19384 features) and test (2031 samples x 19384 features)
 * class labels: 21
@@ -151,11 +152,14 @@ stabilizes around 20 epochs that is explanined by the loss score where the valid
 ![Screenshot](figs/trial1_dropout_0.2.png)  
 * Figure 2. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.2. With the change of dropout to 0.2, slight improvements have been observed, but not the overfitting problem.*
 
-### 4. Nonsynonymous mutation data normalized by gene length
+### Nonsynonymous mutation data normalized by gene length
+
+
+## Simulation C
 
 - Input data
   - snp count (8625 x 19371)
-  - <del>c1 (positional gene sets) pathway (8623 x 326)</del>
+  - <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
   - c2 (Curated gene sets) pathway (8623 x 4762)
   - <del>c3 (noncoding) pathway (8616 x 836)</del>
   - c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
@@ -163,6 +167,10 @@ stabilizes around 20 epochs that is explanined by the loss score where the valid
   - c6 (oncogenic signatures) pathway (8613 x 189)
   - c7 (immunologic signatures) pathway (8623 x 4872)
   - <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+
+### Pathway data
+
+
 
 
 
