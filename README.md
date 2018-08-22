@@ -159,14 +159,10 @@ classes=21
 
 ### Nonsynonymous mutation data normalized by gene length
 
-![Screenshot](figs/c21.missense.snp_cnt_norm.drop01.jpg)
-**Figure 14**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 34.2%.
-
-![Screenshot](figs/c21.missense.snp_cnt_norm.drop03.jpg)  
-**Figure 15**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and **no** max pooling. The best test accuracy is 37.3%.
-
-![Screenshot](figs/c21.missense.snp_cnt_norm.drop05.jpg)  
-**Figure 16**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 38.9%.
+![alt text](figs/c21.missense.snp_cnt_norm.drop01.jpg)
+![alt text](figs/c21.missense.snp_cnt_norm.drop03.jpg)
+![alt text](figs/c21.missense.snp_cnt_norm.drop05.jpg)  
+**Figure 17**. Nonsynonymous mutation accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) and **no max pooling**. The best accuracies are 34.2%, 37.3%, and 38.9%, respectively.
 
 **A few notes by observing the performance:**
   - similar to [Simulation A](#simulation-a), dropout of 0.5 seems to work best.
@@ -181,7 +177,7 @@ classes=21
 
 * We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h gene sets as they appear to be less relevant to cancer classification.  We first evaluate each pathway and then combine some of them to assess the performance.  Note that we build the pathway matrix using [normalized all mutation count](#all-mutation-data-normalized-by-gene-length).
 
-* <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
+* <del>c1 (positional gene sets) pathway (8623 x 326)</del>
 * [x] c2 (Curated gene sets) pathway (8623 x 4762)
 
 ![alt text](figs/c21.all.c2.drop01.png)
