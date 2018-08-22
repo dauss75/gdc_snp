@@ -183,7 +183,7 @@ classes=21
 ![alt text](figs/c21.all.c2.drop01.png)
 ![alt text](figs/c21.all.c2.drop03.png)
 ![alt text](figs/c21.all.c2.drop05.png)  
-**Figure 7**. c2 pathway accuracy with **dropout = 0.1 (top), 0.3 (middle), and 0.5 (bottom)** with best accuracies of **43.5%, 44.3%, and 43.7**, respectively.
+**Figure 7**. c2 pathway accuracy with **dropout = 0.1 (top), 0.3 (middle), and 0.5 (bottom) and no max pooling.** The best accuracies are **43.5%, 44.3%, and 43.7**, respectively.
 
 * <del>c3 (noncoding) pathway (8616 x 836)</del>
 * [x] c4 (cancer-oriented computational gene sets) pathway (8610 x 858) - no independent test, but part of combo dataset
@@ -191,20 +191,20 @@ classes=21
 
 ![alt text](figs/c21.all.c5.drop01.png)
 ![alt text](figs/c21.all.c5.drop05.png)  
-**Figure 8**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **40.2% and 38.3%**, respectively.
+**Figure 8**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom) and no max pooling.** The best accuracies are **40.2% and 38.3%**, respectively.
 
 * [x] c6 (oncogenic signatures) pathway (8613 x 189) - no independent test, but part of combo dataset
 * [x] c7 (immunologic signatures) pathway (8623 x 4872)
 
 ![alt text](figs/c21.all.c7.drop01.png)
 ![alt text](figs/c21.all.c7.drop05.png)  
-**Figure 9**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **32.3% and 13.0%**, respectively.
+**Figure 9**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom) and no max pooling.** The best accuracies are **32.3% and 13.0%**, respectively.
 
 * [x] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
 
 ![alt text](figs/c21.all.combo.drop01.png)
 ![alt text](figs/c21.all.combo.drop05.png)  
-**Figure 10**. combo pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **45.3% and 11.4%**, respectively.
+**Figure 10**. combo pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom) and no max pooling.**  The best accuracies are **45.3% and 11.4%**, respectively.
 
 * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
 
