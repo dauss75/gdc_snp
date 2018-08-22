@@ -198,23 +198,26 @@ classes=21
 
 ![alt text](figs/c21.all.c7.drop01.png)
 ![alt text](figs/c21.all.c7.drop05.png)  
-**Figure 8**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **32.3% and 13.0%**, respectively.
+**Figure 9**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **32.3% and 13.0%**, respectively.
 
-* [ ] test c7 with sgd optimizer instead of adam due to the test accuracy
+* [x] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
 
+![alt text](figs/c21.all.combo.drop01.png)
+![alt text](figs/c21.all.combo.drop05.png)  
+**Figure 9**. combo pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **45.3% and 11.4%**, respectively.
 
-
-* [ ] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
 * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+
+* [ ] test c7 and combo (c2+c4+c5+c6+c7) with sgd optimizer instead of adam due to the test accuracy
 
 ## Simulation D
 
 ### All mutation data normalized by gene length + Pathway data
 
-  * [ ] snp_cnt_norm + c2
-  * [ ] snp_cnt_norm + c5
-  * [ ] snp_cnt_norm + c7
-  * [ ] snp_cnt_norm + combo
+* [ ] snp_cnt_norm + c2
+* [ ] snp_cnt_norm + c5
+* [ ] snp_cnt_norm + c7
+* [ ] snp_cnt_norm + combo
 
 
 
