@@ -183,7 +183,10 @@ classes=21
 
   * <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
   * [x] c2 (Curated gene sets) pathway (8623 x 4762)
-  ![alt text](figs/c21.all.c2.drop01.png)![alt text](figs/c21.all.c2.drop03.png)![alt text](figs/c21.all.c2.drop05.png)  
+  ![alt text](figs/c21.all.c2.drop01.png)
+  ![alt text](figs/c21.all.c2.drop03.png)
+  ![alt text](figs/c21.all.c2.drop05.png)  
+  **Figure 17**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
 
 
   * <del>c3 (noncoding) pathway (8616 x 836)</del>
