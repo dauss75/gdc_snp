@@ -84,7 +84,7 @@ out_act='softmax'
 loss='categorical_crossentropy'
 optimizer='adam'
 metrics='accuracy'
-epochs=20
+epochs=30
 batch_size=32
 classes=21
 ```
@@ -133,7 +133,7 @@ out_act='softmax'
 loss='categorical_crossentropy'
 optimizer='adam'
 metrics='accuracy'
-epochs=20
+epochs=30
 batch_size=32
 classes=21
 ```
@@ -163,19 +163,47 @@ classes=21
 
 * We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h gene sets as they appear to be less relevant to cancer classification.  We first evaluate each pathway and then combine some of them to assess the performance.  Note that we build the pathway matrix using [normalized all mutation count](#all-mutation-data-normalized-by-gene-length).
 
+* Common hyperparameters
+```
+conv=[128, 20, 1, 128, 10, 1]
+dense=[256, 128]
+activation='relu'
+out_act='softmax'
+loss='categorical_crossentropy'
+optimizer='adam'
+metrics='accuracy'
+epochs=30
+batch_size=32
+classes=21
+```
+
 * <del>c1 (positional gene sets) pathway (8623 x 326)</del>
 * [x] c2 (Curated gene sets) pathway (8623 x 4762)
 
 ![alt text](figs/c21.all.c2.drop01.png)
 ![alt text](figs/c21.all.c2.drop03.png)
 ![alt text](figs/c21.all.c2.drop05.png)  
-**Figure 7**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
+**Figure 7**. c2 pathway accuracy with **dropout = 0.1 (top), 0.3 (middle), and 0.5 (bottom)** with best accuracies of **43.5%, 44.3%, and 43.7**, respectively.
 
 * <del>c3 (noncoding) pathway (8616 x 836)</del>
 * [ ] c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
-* [ ] c5 (GO gene sets) pathway (8622 x 5917)
+* [x] c5 (GO gene sets) pathway (8622 x 5917)
+
+![alt text](figs/c21.all.c5.drop01.png)
+![alt text](figs/c21.all.c5.drop05.png)  
+**Figure 8**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **40.2% and 38.3%**, respectively.
+
 * [ ] c6 (oncogenic signatures) pathway (8613 x 189)
-* [ ] c7 (immunologic signatures) pathway (8623 x 4872)
+* [x] c7 (immunologic signatures) pathway (8623 x 4872)
+
+![alt text](figs/c21.all.c7.drop01.png)
+![alt text](figs/c21.all.c7.drop05.png)  
+**Figure 8**. c5 pathway accuracy with **dropout = 0.1 (top) and 0.5 (bottom)** with best accuracies of **32.3% and 13.0%**, respectively.
+
+* [ ] test c7 with sgd optimizer instead of adam due to the test accuracy
+
+
+
 * [ ] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
 * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
 
