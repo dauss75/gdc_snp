@@ -103,11 +103,11 @@ classes=21
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_01.png)
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_03.png)
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_05.png)
-**Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and max pooling 1 x 10**. The best test accuracies are 38.4%, 40.2%, 40.9%, respectively.
+**Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and max pooling 1 x 10**. The best test accuracies are **38.4%, 40.2%, 40.9%**, respectively.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_01.png)
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
-**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top) and 0.5 (bottom) and no max pooling**. The best test accuracies are each 45.5% and 48.2%.
+**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top) and 0.5 (bottom) and no max pooling**. The best test accuracies are each **45.5% and 48.2%**.
 
 
 **A few notes by observing the performance:**
@@ -148,14 +148,14 @@ classes=21
 ![alt text](figs/c21.missense.snp_cnt_norm.drop01.jpg)
 ![alt text](figs/c21.missense.snp_cnt_norm.drop03.jpg)
 ![alt text](figs/c21.missense.snp_cnt_norm.drop05.jpg)  
-**Figure 6**. Prediction accuracy trained on nonsynonymous mutation data with **dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) and no max pooling**. The best accuracies on validation data are 34.2%, 37.3%, and 38.9%, respectively.
+**Figure 6**. Prediction accuracy trained on nonsynonymous mutation data with **dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) and no max pooling**. The best accuracies on validation data are **34.2%, 37.3%, and 38.9%**, respectively.
 
 **A few notes by observing the performance:**
   - similar to [Simulation A](#simulation-a), dropout of 0.5 seems to work best.
 
 **Conclusion from [Simulation A](#simulation-a) and [Simulation B](#simulation-b)**
-  - all mutation count normalized by gene length yields the best test accuracy of 48.2% with dropout=0.5.
-  - considering nonsynonymous mutation (or missense) data, the best performance was 10% lower than utilizing all mutation data.  
+  - all mutation count normalized by gene length yields the best test accuracy of **48.2% with dropout=0.5**.
+  - considering nonsynonymous mutation (or missense) data, the best performance was **10% lower** than utilizing all mutation data.  
 
 ## Simulation C
 
