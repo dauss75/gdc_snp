@@ -91,7 +91,7 @@ classes=21
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
 ![Screenshot](figs/c21.all.snp_cnt.drop_03.png)
-![Screenshot](c21.all.snp_cnt.drop_05.png)  
+![Screenshot](figs/c21.all.snp_cnt.drop_05.png)  
 **Figure 1.** accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and max pooling 1 x 10**. The best test accuracies are **42.5%, 40.4%, and 40.6%**, respectively.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
