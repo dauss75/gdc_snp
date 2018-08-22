@@ -181,21 +181,21 @@ classes=21
 
 * We use the [GSEA MSigDB](http://software.broadinstitute.org/gsea/msigdb/collections.jsp) collections as listed below and exclude c1, c3, and h gene sets as they appear to be less relevant to cancer classification.  We first evaluate each pathway and then combine some of them to assess the performance.  Note that we build the pathway matrix using [normalized all mutation count](#all-mutation-data-normalized-by-gene-length).
 
-  * <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
-  * [x] c2 (Curated gene sets) pathway (8623 x 4762)
-  ![alt text](figs/c21.all.c2.drop01.png)
-  ![alt text](figs/c21.all.c2.drop03.png)
-  ![alt text](figs/c21.all.c2.drop05.png)  
-  **Figure 17**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
+* <del>c1 (positional gene sets) pathway (8623 x 326)</del> -
+* [x] c2 (Curated gene sets) pathway (8623 x 4762)
 
+![alt text](figs/c21.all.c2.drop01.png)
+![alt text](figs/c21.all.c2.drop03.png)
+![alt text](figs/c21.all.c2.drop05.png)  
+**Figure 17**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
 
-  * <del>c3 (noncoding) pathway (8616 x 836)</del>
-  * [ ] c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
-  * [ ] c5 (GO gene sets) pathway (8622 x 5917)
-  * [ ] c6 (oncogenic signatures) pathway (8613 x 189)
-  * [ ] c7 (immunologic signatures) pathway (8623 x 4872)
-  * [ ] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
-  * <del>h (hallmark gene sets) pathway (8576 x 50)</del>
+* <del>c3 (noncoding) pathway (8616 x 836)</del>
+* [ ] c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
+* [ ] c5 (GO gene sets) pathway (8622 x 5917)
+* [ ] c6 (oncogenic signatures) pathway (8613 x 189)
+* [ ] c7 (immunologic signatures) pathway (8623 x 4872)
+* [ ] combo (c2+c4+c5+c6+c7) pathway (8623 x 4872)
+* <del>h (hallmark gene sets) pathway (8576 x 50)</del>
 
 ## Simulation D
 
