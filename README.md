@@ -90,34 +90,25 @@ classes=21
 ```
 
 ![Screenshot](figs/c21.all.snp_cnt.drop_01.png)
-**Figure 1**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 42.5%.
-
 ![Screenshot](figs/c21.all.snp_cnt.drop_03.png)
-**Figure 2**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.4%.
-
 ![Screenshot](c21.all.snp_cnt.drop_05.png)  
-**Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.6%.
+**Figure 1.** accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and max pooling 1 x 10**. The best test accuracies are **42.5%, 40.4%, and 40.6%**, respectively.
 
 ![Screenshot](figs/c21.all.snp_cnt.nopool.drop_01.png)
-**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 44.9%.
+**Figure 2**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 and no max pooling**. The best test accuracy is **44.9%**.
 
 
 ### All mutation data normalized by gene length
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_01.png)
-**Figure 6**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and max pooling 1 x 10. The best test accuracy is 38.4%.
-
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_03.png)
-**Figure 7**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and max pooling 1 x 10. The best test accuracy is 40.2%.
-
 ![Screenshot](figs/c21.all.snp_cnt_norm.drop_05.png)
-**Figure 8**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and max pooling 1 x 10. The best test accuracy is 40.9%.
+**Figure 3**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and max pooling 1 x 10**. The best test accuracies are 38.4%, 40.2%, 40.9%, respectively.
 
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_01.png)
-**Figure 9**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 45.5%.
-
 ![Screenshot](figs/c21.all.snp_cnt_norm.nopool_drop_05.png)
-**Figure 10**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 48.2%.
+**Figure 4**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top) and 0.5 (bottom) and no max pooling**. The best test accuracies are each 45.5% and 48.2%.
+
 
 **A few notes by observing the performance:**
   - due to the overfitting problems shown in loss figures, dropout of 0.5 seems to be the right choice.
@@ -148,21 +139,16 @@ classes=21
 ```
 
 ![Screenshot](figs/c21.missense.snp_cnt.drop01.jpg)  
-**Figure 11**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.1 and **no** max pooling. The best test accuracy is 38.1%.
-
 ![Screenshot](figs/c21.missense.snp_cnt.drop03.jpg)
-**Figure 12**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.3 and **no** max pooling. The best test accuracy is 36.8%.
-
 ![Screenshot](figs/c21.missense.snp_cnt.drop05.jpg)  
-**Figure 13**. accuracy (A) and loss (B) scores are shown over epochs with dropout=0.5 and **no** max pooling. The best test accuracy is 38.6%.
-
+**Figure 5**. accuracy (A) and loss (B) scores are shown over epochs with **dropout=0.1 (top), 0.3 (middle), 0.5 (bottom) and no max pooling**. The best test accuracies are **38.1%, 36.8%, and 38.6%**, respectively.
 
 ### Nonsynonymous mutation data normalized by gene length
 
 ![alt text](figs/c21.missense.snp_cnt_norm.drop01.jpg)
 ![alt text](figs/c21.missense.snp_cnt_norm.drop03.jpg)
 ![alt text](figs/c21.missense.snp_cnt_norm.drop05.jpg)  
-**Figure 17**. Nonsynonymous mutation accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) and **no max pooling**. The best accuracies are 34.2%, 37.3%, and 38.9%, respectively.
+**Figure 6**. Prediction accuracy trained on nonsynonymous mutation data with **dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) and no max pooling**. The best accuracies on validation data are 34.2%, 37.3%, and 38.9%, respectively.
 
 **A few notes by observing the performance:**
   - similar to [Simulation A](#simulation-a), dropout of 0.5 seems to work best.
@@ -183,7 +169,7 @@ classes=21
 ![alt text](figs/c21.all.c2.drop01.png)
 ![alt text](figs/c21.all.c2.drop03.png)
 ![alt text](figs/c21.all.c2.drop05.png)  
-**Figure 17**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
+**Figure 7**. c2 pathway accuracy with dropout = 0.1 (top), 0.3 (middle), 0.5 (bottom) with best accuracies of 43.5%, 44.3%, and 43.7, respectively.
 
 * <del>c3 (noncoding) pathway (8616 x 836)</del>
 * [ ] c4 (cancer-oriented computational gene sets) pathway (8610 x 858)
